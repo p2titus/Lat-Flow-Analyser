@@ -140,6 +140,12 @@ cython_debug/
 # json is used for key storage - good idea to blanket ignore them
 *.json
 
-
 # custom
 .idea/
+
+# images for testing/prod shouldn't be tracked
+# some common image extensions
+*.jpg
+*.png
+*.jpeg
+*.gif
