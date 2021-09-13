@@ -10,8 +10,13 @@ def __count_bars(img):
     return 1
 
 
-def analyse(load_imgs):
+def analyse(load_imgs, debug=False):
     imgs = load_imgs()
     bw_imgs = map(__mask_img, imgs)
     bars = map(__count_bars, bw_imgs)
+    if debug is True:
+        result = zip(imgs, bw_imgs, bars)
+    else:
+        result = bars
+    return list(result)
 
